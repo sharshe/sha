@@ -1,0 +1,4 @@
+{
+"uniqueTransactionId" : "P-1234567890",
+"ChargeDetails" : "${headers.ChargeDetails}
+}

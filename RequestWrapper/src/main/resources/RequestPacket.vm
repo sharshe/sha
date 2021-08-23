@@ -1,0 +1,29 @@
+{
+  "lookup" : "${headers.looup}",
+
+"commands": [
+    {
+      "insert": {
+        "return-object": true,
+        "object": {
+          "${headers.looup}": {
+            "chargeId": ${headers.chargeID},
+            "transAmount": ${headers.transactionAmount}
+          }
+        }
+      }
+      },
+        {
+          "get-objects": {
+        "out-identifier": "returnedObject"
+       }
+        },
+    {
+      "fire-all-rules": ""
+
+    },
+    {
+      "dispose": {}
+    }
+  ]
+}

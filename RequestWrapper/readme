@@ -1,0 +1,6 @@
+mvn clean install
+docker build -t requestwraper .
+docker run -d -p 0.0.0.0:9089:9080 requestwraper
+docker logs -f  336c545450176274cd
+
+curl -XPOST -H 'content-type:application/json' -d '{"uniqueTransactionId" : "P-1234567890","chargeID" : "364","transactionAmount" : 100.0 }' "http://10.15.15.229:9089/api/pta/wrapper"
